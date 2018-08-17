@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+<meta charset="utf-8">
+
+</head>
+
+
+<script>
+
+//Episod one of Fun Fun Function - wyjaśnienie dotyczące FILTER
+
+/*
+var animals = ["pies", "kot", "wrobel", "koń", "pies", "krowa", "pies"];
+
+//Sposób pierwszy - klasyczny
+/*var dogs=[]
+for (i=0; i<animals.length; i++) {
+  if (animals[i] == "koń")
+  dogs.push(animals[i])
+}
+*/
+
+//Sposób drugi - callback function
+/*
+var dogs = animals.filter(function(zwierze) {
+  return zwierze==="pies"
+})
+*/
+
+//Sposób drugi - inne podejście
+/*
+var isDog = function(zwierze) {
+  return zwierze =="krowa";
+}
+
+var dogs = animals.filter(isDog);
+
+*/
+//console.log(dogs);
+
+
+//Episode two of Fun fun function - wyjaśnienie dotyczące MAP
+//UWAGA - zmiana na potrzeby git
+var animals =[
+  {name: 'Flora', species: 'kot'},
+  {name: 'Zoja', species: 'pies'},
+  {name: 'Zorza', species: 'ryba'},
+  {name: 'Burek', species: 'pies'},
+  {name: 'Karuś', species: 'koń'},
+  {name: 'Mućka', species: 'krowa'},
+];
+
+/* //Pierwszy klasyczny sposób
+var names =[];
+for (var i=0; i<animals.length; i++) {
+  names.push(animals[i].name);
+}
+*/
+
+//Drugi sposób
+
+/*
+var names = animals.map(function(nazwa) {
+  return nazwa.name;
+})
+*/
+
+/*
+// Drugi sposób - wariacja ćwiczenia
+var names = animals.map(function(nazwa) {
+  return nazwa.name + " to " + nazwa.species;
+});
+*/
+
+/*// Trzeci sposób - funkcja strzałkowa
+var names = animals.map((nazwa) => nazwa.name);
+*/
+//console.log(names);
+
+//Episode three of Fun fun function - wyjaśnienie dotyczące REDUCE
+// Szczegóły: https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Array/Reduce
+
+var orders =[
+  {amount: 250},
+  {amount: 400},
+  {amount: 100},
+  {amount: 325}
+]
+
+/* //Pierwszy sposób
+
+var totalAmount = 0;
+for (var i=0; i<orders.length; i++) {
+  totalAmount+=orders[i].amount;
+}
+*/
+
+/* // Drugi sposób - przy użyciu funkcji REDUCE
+var totalAmount = orders.reduce(function(sum, order) {
+  console.log(sum, order);
+  return sum + order.amount
+}, 0)
+*/
+
+/*//Trzeci sposób - metoda strzałkowa
+var totalAmount = orders.reduce((sum, order) => sum + order.amount, 0);
+*/
+
+//console.log(totalAmount);
+
+//Episode four of Fun fun function - wyjaśnienie dotyczące REDUCE c.d.
+
+
+
+//SuperType constructor function
+//SuperType constructor function
+function SuperType(){
+	this.name = "Virat"
+}
+
+//SuperType prototype
+SuperType.prototype.getSuperName = function(){
+	return this.name
+}
+
+//SubType prototype function
+function SubType(){
+	this.age = 26
+}
+
+//Inherit the properties from SuperType
+SubType.prototype = new SuperType();
+
+//Add new property to SubType prototype
+SubType.prototype.getSubAge = function(){
+	return this.age;
+}
+
+//Create a SubType object
+var subTypeObj = new SubType();
+console.log(subTypeObj.name); //Output: Virat
+console.log(subTypeObj.age); //Output: 26
+console.log(subTypeObj.getSuperName()); //Output: Virat
+console.log(subTypeObj.getSubAge()); //Output: 26
+
+SuperType.prototype.hello = function() {
+  console.log("HELLO");
+}
+
+console.log(subTypeObj);
+
+console.log(SubType.prototype.constructor);
+console.log(SuperType.prototype.constructor);
+
+console.log(SuperType.prototype);
+
+/*
+
+function Azjata(narodowosc, jezyk) {
+  this.kraj = narodowosc;
+  this.jezyk = jezyk;
+  this.greet = function() {
+    console.log("Jestem " + narodowosc + " a mój język to " + jezyk);
+  }
+}
+
+var hirohito = new Azjata("Japonczyk", "japoński");
+Azjata.prototype.kolor = "yellow";
+
+Azjata.dieta=function dieta() {
+  console.log("Zjedz dzis ryż");
+};
+
+console.log(Azjata.prototype.constructor);
+
+//console.log(hirohito.kraj);
+//console.log(hirohito.jezyk);
+//console.log(hirohito.greet());
+
+console.log(hirohito);
+console.log(Azjata.prototype);
+console.log(Azjata);
+var akihito = new Azjata("Chinczyk", "chiński");
+
+hirohito.kolor = "yellow";
+
+console.log(akihito.kolor);
+console.log(hirohito.kolor);
+
+console.log(akihito.kolor === hirohito.kolor);
+
+
+
+var tab=[1,1];
+var suma;
+
+for(var i=1; i<=50; i++) {
+  suma=tab[i]+tab[i-1];
+  tab.push(suma);
+}
+
+console.log(tab);
+
+*/
+
+</script>
+
+<body>
+
+  <div>
+
+
+  </div>
+
+</body>
+
+</html>
