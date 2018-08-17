@@ -1,2 +1,2 @@
-sdssds
-Tomek w starej galezi
+sdssdsmerge
+Tomek w starej galezigit
