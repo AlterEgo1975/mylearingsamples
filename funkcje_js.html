@@ -39,10 +39,10 @@ var dogs = animals.filter(isDog);
 
 */
 //console.log(dogs);
-
+//=========================================================================================
 
 //Episode two of Fun fun function - wyjaśnienie dotyczące MAP
-
+/*
 var animals =[
   {name: 'Flora', species: 'kot'},
   {name: 'Zoja', species: 'pies'},
@@ -51,7 +51,7 @@ var animals =[
   {name: 'Karuś', species: 'koń'},
   {name: 'Mućka', species: 'krowa'},
 ];
-
+*/
 /* //Pierwszy klasyczny sposób
 var names =[];
 for (var i=0; i<animals.length; i++) {
@@ -79,16 +79,17 @@ var names = animals.map((nazwa) => nazwa.name);
 */
 //console.log(names);
 
+//====================================================================================
 //Episode three of Fun fun function - wyjaśnienie dotyczące REDUCE
 // Szczegóły: https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Array/Reduce
-
+/*
 var orders =[
   {amount: 250},
   {amount: 400},
   {amount: 100},
   {amount: 325}
 ]
-
+*/
 /* //Pierwszy sposób
 
 var totalAmount = 0;
@@ -97,11 +98,12 @@ for (var i=0; i<orders.length; i++) {
 }
 */
 
-/* // Drugi sposób - przy użyciu funkcji REDUCE
+ // Drugi sposób - przy użyciu funkcji REDUCE
+/*
 var totalAmount = orders.reduce(function(sum, order) {
   console.log(sum, order);
   return sum + order.amount
-}, 0)
+},0)
 */
 
 /*//Trzeci sposób - metoda strzałkowa
@@ -109,110 +111,96 @@ var totalAmount = orders.reduce((sum, order) => sum + order.amount, 0);
 */
 
 //console.log(totalAmount);
-
+//===============================================================================
 //Episode four of Fun fun function - wyjaśnienie dotyczące REDUCE c.d.
 
-
-
-//SuperType constructor function
-//SuperType constructor function
-function SuperType(){
-	this.name = "Virat"
-}
-
-//SuperType prototype
-SuperType.prototype.getSuperName = function(){
-	return this.name
-}
-
-//SubType prototype function
-function SubType(){
-	this.age = 26
-}
-
-//Inherit the properties from SuperType
-SubType.prototype = new SuperType();
-
-//Add new property to SubType prototype
-SubType.prototype.getSubAge = function(){
-	return this.age;
-}
-
-//Create a SubType object
-var subTypeObj = new SubType();
-console.log(subTypeObj.name); //Output: Virat
-console.log(subTypeObj.age); //Output: 26
-console.log(subTypeObj.getSuperName()); //Output: Virat
-console.log(subTypeObj.getSubAge()); //Output: 26
-
-SuperType.prototype.hello = function() {
-  console.log("HELLO");
-}
-
-console.log(subTypeObj);
-
-console.log(SubType.prototype.constructor);
-console.log(SuperType.prototype.constructor);
-
-console.log(SuperType.prototype);
-
+//Dygresja dotycząca pobierania pliku - ale nie działa w CHrome tylko w Firefox
 /*
-
-function Azjata(narodowosc, jezyk) {
-  this.kraj = narodowosc;
-  this.jezyk = jezyk;
-  this.greet = function() {
-    console.log("Jestem " + narodowosc + " a mój język to " + jezyk);
-  }
-}
-
-var hirohito = new Azjata("Japonczyk", "japoński");
-Azjata.prototype.kolor = "yellow";
-
-Azjata.dieta=function dieta() {
-  console.log("Zjedz dzis ryż");
-};
-
-console.log(Azjata.prototype.constructor);
-
-//console.log(hirohito.kraj);
-//console.log(hirohito.jezyk);
-//console.log(hirohito.greet());
-
-console.log(hirohito);
-console.log(Azjata.prototype);
-console.log(Azjata);
-var akihito = new Azjata("Chinczyk", "chiński");
-
-hirohito.kolor = "yellow";
-
-console.log(akihito.kolor);
-console.log(hirohito.kolor);
-
-console.log(akihito.kolor === hirohito.kolor);
-
-
-
-var tab=[1,1];
-var suma;
-
-for(var i=1; i<=50; i++) {
-  suma=tab[i]+tab[i-1];
-  tab.push(suma);
-}
-
-console.log(tab);
-
+fetch('data.txt')
+  .then(response => response.text())
+  .then(text => console.log(text))
 */
+
+//Program tlumaczacy pobieranie pliku przez FileReader oraz dalsze wykorzystanie funkcji 'reduce'
 
 </script>
 
 <body>
 
   <div>
-
+<!--<input type="file" id="pobieranie"> -->
 
   </div>
+
+<script>/*
+document.getElementById('pobieranie').addEventListener('change', laduj);
+
+function laduj() {
+  var plik = document.getElementById('pobieranie').files[0];
+  var reader = new FileReader();
+
+  reader.onload = function(event) {
+    var contents = event.target.result;
+    var conto1 = contents
+    .trim() // usuwa whitespace z obu stron stringa - musi być przez splitem, bo dziala na stringi a nie na array, ktora by powstala po splicie.
+    .split('\n')
+    .map((linia) => linia.split('\t'))
+    .reduce((customers, linia) => {
+      customers[linia[0]] = customers[linia[0]] || []; //if value are not boolean, JS makes implicit conversation to boolean. But in this case it will not return true or false but will return the values that stand for before conversation to boolean. If the first value is false it will return the second value, if the first value is true it returns the first value.
+      customers[linia[0]].push({
+        nazwa: linia[1],
+        price: linia[2],
+        quantity: linia[3]
+      })
+      return customers;
+    }, {});
+
+
+    console.log('conto1', JSON.stringify(conto1, null, 2));
+
+  }
+  reader.readAsText(plik);
+}
+*/
+
+//JEST TO PRZYKŁAD DODOWANIA NEW PROPPERTY TO OBJECT
+/*
+var probny_obiekt = {};
+probny_obiekt['imie']="Tomasz";
+probny_obiekt['nazwisko']="Bałabaniak";
+probny_obiekt['zabawki']=[];
+probny_obiekt['zabawki'].push("jajko");
+
+
+console.log(probny_obiekt.zabawki); //["jajko"]
+*/
+//=========================================================================================
+//Episode six of Fun fun function - wyjaśnienie dotyczące CURRYING c.d.
+/*
+let human = function (name, sex, country) {
+  console.log(name + " is a " + sex + " and is from " + country);
+}
+
+human ("Tom", "man", "Poland");
+*/
+// TO JEST FUNKCJA CURRYING
+/*
+let human = function(name) {
+  return function(sex) {
+    return function(country) {
+      return name + " is a " + sex + " from " + country;
+    }
+  }
+};
+
+// TO JEST POWYZSZA FUNKCJA CURRYIONG ALE W ZAPISIE STRZAŁKOWYM
+
+console.log(human("Ann")("woman")("Poland"));
+
+
+
+</script>
+
 
 </body>
 
