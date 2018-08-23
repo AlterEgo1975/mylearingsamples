@@ -6,7 +6,7 @@
 
 </head>
 
-
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
 <script>
 
 //Episod one of Fun Fun Function - wyjaśnienie dotyczące FILTER
@@ -132,7 +132,8 @@ fetch('data.txt')
 
   </div>
 
-<script>/*
+<script>
+/*
 document.getElementById('pobieranie').addEventListener('change', laduj);
 
 function laduj() {
@@ -193,9 +194,57 @@ let human = function(name) {
   }
 };
 
-// TO JEST POWYZSZA FUNKCJA CURRYIONG ALE W ZAPISIE STRZAŁKOWYM
+console.log(human("Eve")("woman")("Poland"));
+*/
+// TO JEST POWYZSZA FUNKCJA CURRYING ALE W ZAPISIE STRZAŁKOWYM
 
-console.log(human("Ann")("woman")("Poland"));
+/*
+
+ let human =
+  name =>
+  sex =>
+  country =>
+    name + ' is a ' +
+    sex + ' from ' +
+    country;
+
+console.log(human("Eve")("woman")("Poland"));
+
+// albo zamiast powyższego console.log możemy:
+
+let osoba = human("Andrzej");
+let plec = osoba("man");
+
+console.log(plec("Japan"));
+
+*/
+// Inny przykład na CURRYING - niedokończony....
+/*
+let people = [
+  { name: "Akiko", nationality: "Japanese"},
+  { name: "Hiroshi", nationality: "Japanese"},
+  { name: "John", nationality: "American"},
+  { name: "Mary", nationality: "Estonian"}
+];
+
+let isJapanese = (nacja, obj) => obj.nationality === nacja;
+
+let japonczyki = people.filter(obiekt => isJapanese("Japanese", obiekt));
+
+
+console.log(japonczyki);
+
+*/
+var osoba = {
+  rodzenstwo: ['Janek', 'Maria'],
+  cars: ['Polonez', 'Mazda', 'Kia']
+};
+
+console.log(czlowiek.cars[1]);
+
+
+
+
 
 
 
