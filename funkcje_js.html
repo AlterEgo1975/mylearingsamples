@@ -235,14 +235,38 @@ let japonczyki = people.filter(obiekt => isJapanese("Japanese", obiekt));
 console.log(japonczyki);
 
 */
+/*
 var osoba = {
   rodzenstwo: ['Janek', 'Maria'],
   cars: ['Polonez', 'Mazda', 'Kia']
 };
 
 console.log(czlowiek.cars[1]);
+*/
+/*
+const cars = [
+  'yellow toyota',
+  'red Ford',
+  'blue Skoda'
+];
 
+for (const samochod of cars) {
+  console.log(samochod);
+};
 
+//console.log(samochod);
+*/
+var i = 0;
+var a = {
+  ['foo' + ++i]: i,
+  ['foo' + ++i]: i,
+  ['foo' + ++i]: i
+};
+
+console.log(a.foo1); // 1
+console.log(a.foo2); // 2
+console.log(a.foo3); // 3
+console.log(a.foo4);
 
 
 
