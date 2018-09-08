@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <title>RISK MANAGEMENT</title>
+    <link rel="stylesheet" href="riskstyle.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes|Lato:400,900|Lobster&amp;subset=latin-ext" rel="stylesheet">
+
+  </head>
+
+  <body id="AddRisk" onload="loadingRisks()">
+    <div id="container">
+      <header>
+        <h1>
+          Risk management
+        </h1>
+      </header>
+
+        <nav>
+          <ol>
+            <li><a href="#">Risk catalogue</a>
+              <ul>
+                <li><a href="#">Current risks</a></li>
+                <li><a href="#">Trends</a></li>
+                <li><a href="#">Overview chart</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Vocabulary</a>
+              <ul>
+                <li><a href="#">Risk overview</a></li>
+                <li><a href="#">Probability</a></li>
+                <li><a href="#">Likelihood</a></li>
+                <li><a href="#">Risk assurance</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Documentation </a>
+              <ul>
+                <li><a href="#">Add new risk</a></li>
+                <li><a href="#">Remove risk</a></li>
+                <li><a href="#">Update risk</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Regulations</a>
+              <ul>
+                <li><a href="#">Internal procedure</a></li>
+                <li><a href="#">Q & A</a></li>
+              </ul>
+            </li>
+          </ol>
+
+        </nav>
+
+        <article>
+          <p id="doc"> Fill in questionnaire below and click "Submit" button
+          </p>
+
+          <form action="" name="form1">
+
+            <label> RISK NAME: <input id="risk_name" type="text" name="risk_name" maxlength="30" /></label>
+          </br>
+
+            <input id="external" class="risk_source" type="radio" name="risk_source" value="External" checked="checked" />
+            <label for="external">External</label>
+            <input id="people" class="risk_source" type="radio" name="risk_source" value="People" />
+            <label for="people">People</label>
+            <input id="process" class="risk_source" type="radio" name="risk_source" value="Process" />
+            <label for="process">Process</label>
+            <input id="relationship" class="risk_source" type="radio" name="risk_source" value="Relationship" />
+            <label for="relationship">Relationship</label>
+            <input id="system" class="risk_source" type="radio" name="risk_source" value="System" />
+            <label for="system">System</label>
+
+          </br>
+          <label> Type of risk </label>
+            <select id="risk_type" name="risk_type"/>
+              <option value="Legal">Legal</option>
+              <option value="Market">Market</option>
+              <option value="Credit risk">Credit risk</option>
+              <option value="Financial">Financial</option>
+              <option value="IT">IT</option>
+              <option value="Crime">Crime</option>
+            </select>
+          </br>
+            <label> Impact of the risk: </label>
+            <input id="risk_impact" type="number" name="risk_impact" maxlength="3" />
+          </br>
+            <label> Probability of the risk: </label>
+            <input id="risk_probability" type="number" name="risk_probability" maxlength="3" />
+          </br>
+            <label> Description of the risk: </label>
+            <textarea id="description" name="risk_description" cols="80" rows="15" wrap="soft" placeholder="Describe the risk..."></textarea>
+          </br>
+            <label> Experience of the risk: </label>
+          <textarea id="experience" name="risk_experience" cols="80" rows="10" wrap="soft" placeholder="Describe the previous experience..."></textarea>
+          </form>
+
+          <button id="Saving">Save to record</button>
+          <button id="Loading"> Load the records</button>
+
+
+        </article>
+
+    </div>
+    <div id="Attention">
+    </div>
+
+    <script src="new_risk1.js"></script>
+
+  </body>
+
+</html>

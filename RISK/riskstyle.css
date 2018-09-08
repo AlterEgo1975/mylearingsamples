@@ -1,0 +1,232 @@
+body
+{
+  background-image: url("img/tlo.png"); /* Background pattern from Toptal Subtle Patterns */
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  padding: 0;
+}
+
+header
+{
+  background-color: #000000;
+  margin: 0;
+  padding: 0px 0px;
+  width: 100%;
+}
+
+#container
+{
+  width: 100%;
+/*  position: absolute; */
+}
+
+
+.inputfile
+{
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.inputfile + label {
+    font-size: 1.25em;
+    font-weight: 400;
+    color: darkgreen;
+    background-color: lightgreen;
+    display: inline-block;
+    width:100%;
+    height: auto;
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: cyan;
+    cursor: pointer;
+}
+
+
+h1
+{
+  font-size: 80px;
+  letter-spacing: 5px;
+  color: #ebfaeb;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 0;
+  height: 100px;
+  text-transform: uppercase;
+}
+
+nav
+{
+  background-color: #022222;
+  text-align: center;
+  border-bottom: 1px solid #044444;
+  border-top: 1px solid #044444;
+  padding: 15px;
+}
+
+ol
+{
+padding: 0;
+list-style-type: none;
+font-size: 32px;
+height: 50px;
+line-height: 200%;
+display: inline-block;
+margin: 0;
+
+}
+
+ol a
+{
+  color: #c8e8c9;
+  display: block;
+  text-decoration: none;
+}
+
+ol > li
+{
+  float: left;
+  border-right: 1px dashed #a6e6a6;
+  height: 61px;
+  width: 300px;
+
+}
+
+ol > li:first-child
+{
+  border-left: 1px dashed #a6e6a6;
+}
+
+ol > li:hover
+{
+  background-color: #044444;
+  color: red;
+}
+
+ol > li:hover > a
+{
+  color: #a6e6c5;
+}
+
+ol > li > ul
+{
+  list-style-type: none;
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+  background-color: #044444;
+  width: 290px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: none;
+}
+
+ol > li:hover > ul
+{
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+ol > li > ul > li
+{
+  border-top: 1px dotted #a6e6a6;
+}
+
+ol > li > ul > li:hover > a
+{
+  background-color: #022222;
+}
+
+#Risk_source
+{
+  height: 30px;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #33cccc;
+  font-weight: bold;
+  opacity: 0.7;
+
+}
+
+.source
+{
+  border: 2px solid black;
+  border-radius: 10%;
+  width: 90%;
+  text-align: center;
+  background-color: #a3a3c2;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.source:hover
+{
+  background-color: #b4b4d3;
+}
+
+.source_box
+{
+  width: 20%;
+  float: left;
+}
+
+#clear_source_box
+{
+  clear: left;
+}
+
+#source_container
+{
+  height: 450px;
+}
+
+.source ul
+{
+  list-style-type: none;
+  padding: 0;
+
+
+}
+
+.source ul>li
+{
+  display: block;
+  border: 1px solid #022222;
+  border-radius: 5%;
+  color: #edf7ed;
+  background-color: #044848;
+  height: 50px;
+  font-size: 110%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.source ul>li>a
+{
+text-decoration: none;
+color: #edf7ed;
+display: inline-block;
+width:100%;
+height:100%;
+}
+
+h3
+{
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px
+}
+
+.source ul>li:hover
+{
+  background-color: #155959;
+}

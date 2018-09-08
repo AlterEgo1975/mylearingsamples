@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <title>RISK MANAGEMENT</title>
+    <link rel="stylesheet" href="riskstyle.css" type="text/css" />
+    <link rel="stylesheet" href="css/fontello.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes|Lato:400,900|Lobster&amp;subset=latin-ext" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+        <h1>
+          Risk management
+        </h1>
+      </header>
+
+        <nav>
+          <ol>
+            <li><a href="#">Risk catalogue</a>
+              <ul>
+                <li><a href="#">Current risks</a></li>
+                <li><a href="#">Trends</a></li>
+                <li><a href="#">Overview chart</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Vocabulary</a>
+              <ul>
+                <li><a href="#">Risk overview</a></li>
+                <li><a href="#">Probability</a></li>
+                <li><a href="#">Likelihood</a></li>
+                <li><a href="#">Risk assurance</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Documentation </a>
+              <ul>
+                <li id="Add_new_risk"><a href="new_risk1.html">Add new risk</a></li>
+                <li><a href="#">Remove risk</a></li>
+                <li><a href="#">Update risk</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Regulations</a>
+              <ul>
+                <li><a href="#">Internal procedure</a></li>
+                <li><a href="#">Q & A</a></li>
+             </ul>
+            </li>
+          </ol>
+
+        </nav>
+        <input type="file" name="file" id="Upload_file" class="inputfile" />
+        <label for="Upload_file"><i class="icon-upload"></i>Choose file to upload...</label>
+        <div id="Risk_source">Risks grouped by source - click to check the details</div>
+
+        <div id="source_container">
+        <div class="source_box">
+        <div class="source" id="External">
+          <h3>External</h3>
+          <ul>
+            <li><a href="#">Loss of key customers/contract</a></li>
+            <li><a href="#">Compliance with RODO</a></li>
+            <li><a href="#">ERP maintenance default</a></li>
+            <li><a href="#">Interest rate volatility</a></li>
+          </ul>
+        </div>
+      </div>
+        <div class="source_box">
+        <div class="source" id="People">
+          <h3>People</h3>
+          <ul>
+            <li><a href="#">Loss of key staff</a></li>
+            <li><a href="#">Fraudelent payments</a></li>
+            <li><a href="#">Work accident</a></li>
+            <li><a href="#">Theft of non-cash assets</a></li>
+          </ul>
+        </div>
+      </div>
+        <div class="source_box">
+        <div class="source" id="Process">
+          <h3>Process</h3>
+          <ul>
+            <li><a href="#">Machine failure</a></li>
+            <li><a href="#">Product recall</a></li>
+          </ul>
+        </div>
+      </div>
+        <div class="source_box">
+        <div class="source" id="Relationship">
+          <h3>Relationship</h3>
+          <ul>
+            <li><a href="#">Debtor payments default</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="source_box">
+        <div class="source" id="System">
+          <h3>System</h3>
+          <ul>
+            <li><a href="#">Loss of business data</a></li>
+            <li><a href="#">Malicious software infection</a></li>
+          </ul>
+        </div>
+      </div>
+    <div id="clear_source_box"></div>
+      </div>
+
+
+
+    </div>
+
+    <script src="risk.js"></script>
+
+  </body>
+
+</html>
